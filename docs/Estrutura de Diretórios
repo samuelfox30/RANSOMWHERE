@@ -1,0 +1,31 @@
+RANSOMWHERE/
+│
+├── 📁 Core/
+│   ├── Detection.cs        # Algoritmos de detecção (heurística, comportamento, assinaturas)
+│   ├── Protection.cs       # Módulos de proteção em tempo real
+│   ├── FileMonitoring.cs   # Monitoramento de arquivos e diretórios
+│   ├── Logging/            # Logs, e qualquer coisa relacionada
+│   └── Notification.cs     # Alertas para usuário ou sistema
+│
+├── 📁 UI/
+│   ├── Views/              # Janelas e formulários (WPF ou WinForms)
+│   └── Resources/          # Imagens, ícones, estilos, localizações
+│
+├── 📁 Config/              # Configurações necessárias que não seriam parte do núcleo do projeto (outros)
+│
+├── 📁 Tests/               # Nossos testes
+│
+├── 📁 Docs/                # Documentação técnica (txt, pdf, word, etc)
+│
+├── 📁 net9.0/              # Dependências do C# (NÃO SE IMPORTAR)
+│
+├── 📁 obj/                 # Dependências do C# (NÃO SE IMPORTAR)
+│
+├── 📁 net9.0/              # Arquivos executáveis do nosso projeto (NÃO SE IMPORTAR)
+│
+├── .env                     # Variáveis que serão usadas globalmente
+├── .gitgnore                # N sei, coisa do github
+├── README.md                # Descrição do projeto no Git
+├── ransomwhere.sln          # Dependências do C# (NÃO SE IMPORTAR)
+├── Monitoramento.csproj     # Dependências do C# (NÃO SE IMPORTAR)
+└── requirements.txt         # Bibliotecas necessárias
