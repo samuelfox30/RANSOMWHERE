@@ -29,3 +29,5 @@ RANSOMWHERE/
 ├── ransomwhere.sln          # Dependências do C# (NÃO SE IMPORTAR)
 ├── Monitoramento.csproj     # Dependências do C# (NÃO SE IMPORTAR)
 └── requirements.txt         # Bibliotecas necessárias
+
+teste
