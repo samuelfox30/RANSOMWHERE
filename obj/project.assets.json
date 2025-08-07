@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samue\\OneDrive\\Área de Trabalho\\PROFESSIONAL CARRER\\PROJECTS\\d.Dell\\ransomwhere\\Monitoramento.csproj",
+      "projectUniqueName": "C:\\Program Files\\Ransomwhere\\Monitoramento.csproj",
       "projectName": "Monitoramento",
-      "projectPath": "C:\\Users\\samue\\OneDrive\\Área de Trabalho\\PROFESSIONAL CARRER\\PROJECTS\\d.Dell\\ransomwhere\\Monitoramento.csproj",
+      "projectPath": "C:\\Program Files\\Ransomwhere\\Monitoramento.csproj",
       "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samue\\OneDrive\\Área de Trabalho\\PROFESSIONAL CARRER\\PROJECTS\\d.Dell\\ransomwhere\\obj\\",
+      "outputPath": "C:\\Program Files\\Ransomwhere\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config"
