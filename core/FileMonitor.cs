@@ -10,12 +10,12 @@ namespace Monitoramento
         // ====== CONFIGURAÇÕES ======
         private static readonly string[] PastasParaMonitorar = new[]
         {
-            @"C:\Users\jprab\Documents",
-            @"C:\Users\jprab\OneDrive\Área de Trabalho",
-            @"D:\RANSOMWHERE\Teste ramsomwhere"
+            $@"C:\Users\{Environment.UserName}\Documents",
+            $@"C:\Users\{Environment.UserName}\OneDrive\Área de Trabalho",
+            //@"D:\RANSOMWHERE\Teste ramsomwhere"
         };
 
-        private static readonly string PastaLogsBase = @"D:\RANSOMWHERE\Logs";
+        private static readonly string PastaLogsBase = "Logs";
 
         private const int AlertaLimite  = 10; // ≥ eventos
         private const int IntervaloSegs = 5;  // em ≤ segundos

@@ -26,3 +26,4 @@ C:\Users\samue\OneDrive\Área de Trabalho\PROFESSIONAL CARRER\PROJECTS\d.Dell\ra
 C:\Users\samue\OneDrive\Área de Trabalho\PROFESSIONAL CARRER\PROJECTS\d.Dell\ransomwhere\obj\Debug\net9.0\Monitoramento.pdb
 C:\Users\samue\OneDrive\Área de Trabalho\PROFESSIONAL CARRER\PROJECTS\d.Dell\ransomwhere\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
 C:\Users\samue\OneDrive\Área de Trabalho\PROFESSIONAL CARRER\PROJECTS\d.Dell\ransomwhere\obj\Debug\net9.0\ref\Monitoramento.dll
+C:\Users\samue\OneDrive\Área de Trabalho\PROFESSIONAL CARRER\PROJECTS\d.Dell\ransomwhere\obj\Debug\net9.0\Monitoramento.sourcelink.json
