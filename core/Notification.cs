@@ -30,7 +30,7 @@ public class Notification
     {
         var init = Inicializacao();
         var caminhoArquivo = Path.Combine(init["dir"], $"events_{init["dia"]}.log");
-        File.AppendAllText(caminhoArquivo,
-            $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} [COMUM] -> {dados}{Environment.NewLine}");
+        File.AppendAllText(caminhoArquivo, $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} [COMUM] -> {dados}{Environment.NewLine}");
+        Console.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} [COMUM] -> {dados}{Environment.NewLine}");
     }
 }
