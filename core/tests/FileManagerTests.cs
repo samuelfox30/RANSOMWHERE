@@ -17,6 +17,8 @@ class FileManagerTest
     public void Iniciar()
     {
 
+        //contador();
+
         Notification log = new();
         Detection detect = new();
 
@@ -47,4 +49,14 @@ class FileManagerTest
 
         Console.ReadLine();
     }
+
+    private void contador(){
+        int i = 0;
+        while(i > -1){
+            Console.WriteLine(i);
+            Thread.Sleep(1);
+            i++;   
+        }
+    }
+
 }
