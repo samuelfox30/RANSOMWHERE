@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files\\Ransomwhere\\Monitoramento.csproj": {}
+    "D:\\ransomwhere\\RANSOMWHERE\\Monitoramento.csproj": {}
   },
   "projects": {
-    "C:\\Program Files\\Ransomwhere\\Monitoramento.csproj": {
+    "D:\\ransomwhere\\RANSOMWHERE\\Monitoramento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files\\Ransomwhere\\Monitoramento.csproj",
+        "projectUniqueName": "D:\\ransomwhere\\RANSOMWHERE\\Monitoramento.csproj",
         "projectName": "Monitoramento",
-        "projectPath": "C:\\Program Files\\Ransomwhere\\Monitoramento.csproj",
-        "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files\\Ransomwhere\\obj\\",
+        "projectPath": "D:\\ransomwhere\\RANSOMWHERE\\Monitoramento.csproj",
+        "packagesPath": "C:\\Users\\jprab\\.nuget\\packages\\",
+        "outputPath": "D:\\ransomwhere\\RANSOMWHERE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jprab\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -42,3 +42,11 @@ C:\Program Files\Ransomwhere\bin\Debug\net9.0\Monitoramento.dll
 C:\Program Files\Ransomwhere\bin\Debug\net9.0\Monitoramento.pdb
 C:\Program Files\Ransomwhere\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
 C:\Program Files\Ransomwhere\obj\Debug\net9.0\ref\Monitoramento.dll
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.GeneratedMSBuildEditorConfig.editorconfig
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.AssemblyInfoInputs.cache
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.AssemblyInfo.cs
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.csproj.CoreCompileInputs.cache
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.sourcelink.json
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.dll
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\refint\Monitoramento.dll
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.pdb

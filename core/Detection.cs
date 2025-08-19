@@ -13,12 +13,12 @@ namespace Monitoramento
         }
 
         public async Task<bool> stability(string caminho, string delay = 100){
-            if !File.Exists(caminho){
+            if (!File.Exists(caminho)){
                 return false;
             }
 
             while (true){
-                await Task.Delay(delay)
+                await (Task.Delay(delay)
                 try{
                     using var fs = new FileStream(caminho, FileMode.Open, FileAccess.Read, FileShare.None);
                     long tamanho1 = fs.Length;

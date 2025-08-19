@@ -6,7 +6,7 @@ namespace Monitoramento
     {
         static void Main()
         {
-            FileManagerTest fm = new();
+            FileManager fm = new();
             fm.Iniciar();
             //Notification nf = new();
             //nf.Iniciar();
