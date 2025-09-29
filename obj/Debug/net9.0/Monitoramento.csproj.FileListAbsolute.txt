@@ -65,3 +65,10 @@ C:\ransomwhere\obj\Debug\net9.0\refint\Monitoramento.dll
 C:\ransomwhere\obj\Debug\net9.0\Monitoramento.pdb
 C:\ransomwhere\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
 C:\ransomwhere\obj\Debug\net9.0\ref\Monitoramento.dll
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.exe
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.deps.json
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.runtimeconfig.json
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.dll
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.pdb
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\ref\Monitoramento.dll
