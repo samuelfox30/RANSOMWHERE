@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RANSOMWHERE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8dc7a005ce8d4ee9afedeb4395e9b16f0e583d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b637b8a7954fb6c46d1f0beffcc86d4409737159")]
 [assembly: System.Reflection.AssemblyProductAttribute("RANSOMWHERE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RANSOMWHERE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ransomwhere\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj": {}
+    "D:\\rabeloransomware\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj": {}
   },
   "projects": {
-    "D:\\ransomwhere\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj": {
+    "D:\\rabeloransomware\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ransomwhere\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj",
+        "projectUniqueName": "D:\\rabeloransomware\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj",
         "projectName": "RANSOMWHERE",
-        "projectPath": "D:\\ransomwhere\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj",
+        "projectPath": "D:\\rabeloransomware\\RANSOMWHERE\\RANSOMWHERE\\RANSOMWHERE.csproj",
         "packagesPath": "C:\\Users\\jprab\\.nuget\\packages\\",
-        "outputPath": "D:\\ransomwhere\\RANSOMWHERE\\RANSOMWHERE\\obj\\",
+        "outputPath": "D:\\rabeloransomware\\RANSOMWHERE\\RANSOMWHERE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jprab\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -60,11 +60,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }
