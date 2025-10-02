@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "zRaKLe8iBFQ=",
   "success": true,
   "projectFilePath": "C:\\ransomwhere - oldest backup\\Monitoramento.csproj",
-=======
-  "dgSpecHash": "ZSO6LSM+DEg=",
-  "success": true,
-  "projectFilePath": "D:\\rabeloransomware\\RANSOMWHERE\\Monitoramento.csproj",
->>>>>>> 1056e2de95aea50e99ce94b1055338e444c19ed3
   "expectedPackageFiles": [],
   "logs": []
 }

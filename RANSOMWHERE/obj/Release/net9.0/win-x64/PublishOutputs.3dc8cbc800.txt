@@ -1,5 +1,0 @@
-D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\publish\RANSOMWHERE.exe
-D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\publish\RANSOMWHERE.dll
-D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\publish\RANSOMWHERE.deps.json
-D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\publish\RANSOMWHERE.runtimeconfig.json
-D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\publish\RANSOMWHERE.pdb
