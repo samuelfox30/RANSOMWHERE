@@ -1,0 +1,15 @@
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\RANSOMWHERE.exe
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\RANSOMWHERE.deps.json
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\RANSOMWHERE.runtimeconfig.json
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\RANSOMWHERE.dll
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\bin\Release\net9.0\win-x64\RANSOMWHERE.pdb
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.GeneratedMSBuildEditorConfig.editorconfig
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.AssemblyInfoInputs.cache
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.AssemblyInfo.cs
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.csproj.CoreCompileInputs.cache
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.sourcelink.json
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.dll
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\refint\RANSOMWHERE.dll
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.pdb
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\RANSOMWHERE.genruntimeconfig.cache
+D:\ransomwhere\RANSOMWHERE\RANSOMWHERE\obj\Release\net9.0\win-x64\ref\RANSOMWHERE.dll

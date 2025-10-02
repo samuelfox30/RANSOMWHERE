@@ -65,6 +65,7 @@ C:\ransomwhere\obj\Debug\net9.0\refint\Monitoramento.dll
 C:\ransomwhere\obj\Debug\net9.0\Monitoramento.pdb
 C:\ransomwhere\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
 C:\ransomwhere\obj\Debug\net9.0\ref\Monitoramento.dll
+<<<<<<< HEAD
 C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.exe
 C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.deps.json
 C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.runtimeconfig.json
@@ -113,3 +114,12 @@ D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.pdb
 D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
 D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\ref\Monitoramento.dll
 >>>>>>> 73ac83e8c0ff45047ea887e1f96e30a7a5531dc9
+=======
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.exe
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.deps.json
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.runtimeconfig.json
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.dll
+D:\ransomwhere\RANSOMWHERE\bin\Debug\net9.0\Monitoramento.pdb
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
+D:\ransomwhere\RANSOMWHERE\obj\Debug\net9.0\ref\Monitoramento.dll
+>>>>>>> 1056e2de95aea50e99ce94b1055338e444c19ed3
