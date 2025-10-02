@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ransomwhere - oldest backup\\Monitoramento.csproj": {}
+    "C:\\RANSOMWHERE\\Monitoramento.csproj": {}
   },
   "projects": {
-    "C:\\ransomwhere - oldest backup\\Monitoramento.csproj": {
+    "C:\\RANSOMWHERE\\Monitoramento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ransomwhere - oldest backup\\Monitoramento.csproj",
+        "projectUniqueName": "C:\\RANSOMWHERE\\Monitoramento.csproj",
         "projectName": "Monitoramento",
-        "projectPath": "C:\\ransomwhere - oldest backup\\Monitoramento.csproj",
+        "projectPath": "C:\\RANSOMWHERE\\Monitoramento.csproj",
         "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-        "outputPath": "C:\\ransomwhere - oldest backup\\obj\\",
+        "outputPath": "C:\\RANSOMWHERE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config"
