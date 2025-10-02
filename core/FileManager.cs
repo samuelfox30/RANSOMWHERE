@@ -7,10 +7,17 @@ namespace Monitoramento
     public class FileManager
     {
         // Pastas que serão monitoradas
-        private readonly string[] PastasParaMonitorar = new[]
+        /* private readonly string[] PastasParaMonitorar = new[]
         {
             $@"C:\Users\{Environment.UserName}\Documents",
             $@"C:\Users\{Environment.UserName}\OneDrive\Área de Trabalho",
+        }; */
+        private readonly string[] PastasParaMonitorar = new[]
+        {
+            $@"C:\Users\{Environment.UserName}\Documents",
+            $@"C:\Users\{Environment.UserName}\Desktop",
+            $@"C:\Users\{Environment.UserName}\Pictures",
+            $@"C:\Users\{Environment.UserName}\Downloads",
         };
 
         // Lista para segurar watchers (evita que sejam coletados pelo GC)

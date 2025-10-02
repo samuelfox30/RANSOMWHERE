@@ -65,3 +65,51 @@ C:\ransomwhere\obj\Debug\net9.0\refint\Monitoramento.dll
 C:\ransomwhere\obj\Debug\net9.0\Monitoramento.pdb
 C:\ransomwhere\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
 C:\ransomwhere\obj\Debug\net9.0\ref\Monitoramento.dll
+C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.exe
+C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.deps.json
+C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.runtimeconfig.json
+C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.dll
+C:\ransomwhere - oldest backup\bin\Debug\net9.0\Monitoramento.pdb
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.GeneratedMSBuildEditorConfig.editorconfig
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.AssemblyInfoInputs.cache
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.AssemblyInfo.cs
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.csproj.CoreCompileInputs.cache
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.sourcelink.json
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.dll
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\refint\Monitoramento.dll
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.pdb
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
+C:\ransomwhere - oldest backup\obj\Debug\net9.0\ref\Monitoramento.dll
+<<<<<<< HEAD
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.exe
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.deps.json
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.runtimeconfig.json
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.pdb
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.GeneratedMSBuildEditorConfig.editorconfig
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.AssemblyInfoInputs.cache
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.AssemblyInfo.cs
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.csproj.CoreCompileInputs.cache
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.sourcelink.json
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.dll
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\refint\Monitoramento.dll
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.pdb
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\ref\Monitoramento.dll
+=======
+D:\rabeloransomware\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.exe
+D:\rabeloransomware\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.deps.json
+D:\rabeloransomware\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.runtimeconfig.json
+D:\rabeloransomware\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.dll
+D:\rabeloransomware\RANSOMWHERE_OFC\bin\Debug\net9.0\Monitoramento.pdb
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.GeneratedMSBuildEditorConfig.editorconfig
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.AssemblyInfoInputs.cache
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.AssemblyInfo.cs
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.csproj.CoreCompileInputs.cache
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.sourcelink.json
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.dll
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\refint\Monitoramento.dll
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.pdb
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
+D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\ref\Monitoramento.dll
+>>>>>>> 73ac83e8c0ff45047ea887e1f96e30a7a5531dc9
