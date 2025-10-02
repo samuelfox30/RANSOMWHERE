@@ -1,122 +1,197 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿// RealtimeDetection.cs
+// Requires: Microsoft.Diagnostics.Tracing.TraceEvent (NuGet)
+// Run as Administrator
+
+using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.Diagnostics.Tracing.Parsers;
+using Microsoft.Diagnostics.Tracing.Session;
 
 namespace Monitoramento
 {
-    public class Detection
+    public class RealtimeDetection : IDisposable
     {
-        private static readonly ConcurrentDictionary<string, int> contadorEventos = new();
-        private readonly Protection protector = new();
+        private readonly string[] targetFoldersNormalized; // normalized folders with trailing separator
+        private readonly int windowSeconds;
+        private readonly int threshold;
+        private readonly Protection protector;
 
-        public async Task Detector(string fileWay)
+        // per-pid queues of timestamps
+        private readonly ConcurrentDictionary<int, ConcurrentQueue<DateTime>> pidEvents = new();
+        private readonly ConcurrentDictionary<int, bool> pidHandled = new();
+
+        private TraceEventSession session;
+        private Task processingTask;
+        private CancellationTokenSource cts;
+
+        /// <summary>
+        /// Construtor: passe os caminhos das pastas que você quer monitorar.
+        /// Ex: new RealtimeDetection(new[] { documents, downloads, pictures, desktop }, 1, 8)
+        /// </summary>
+        public RealtimeDetection(IEnumerable<string> targetFolders, int windowSeconds = 1, int threshold = 10)
         {
-            if (string.IsNullOrWhiteSpace(fileWay))
+            if (targetFolders == null) throw new ArgumentNullException(nameof(targetFolders));
+
+            var list = new List<string>();
+            foreach (var f in targetFolders)
             {
-                Console.WriteLine("[WARN] Caminho inválido.");
-                return;
-            }
-
-            Console.WriteLine($"[Detection] Verificando arquivo {fileWay}...");
-
-            // VERIFICAR EXTENSÃO SUSPEITA
-            if (VerificarExtensaoSuspeita(fileWay))
-            {
-                Console.WriteLine("🚨 Extensão suspeita detectada.");
-                await AcionarProtecaoAsync(fileWay);
-            }
-
-            // VERIFICAR ENTROPIA
-            double entropia = CalcularEntropia(fileWay);
-            Console.WriteLine($"[Detection] Entropia do arquivo: {entropia:F4}");
-            if (entropia > 5.35)
-            {
-                Console.WriteLine("⚠️ Alta entropia detectada.");
-                await AcionarProtecaoAsync(fileWay);
-            }
-
-            // VERIFICAR MODIFICAÇÃO EM MASSA
-            string? pasta = Path.GetDirectoryName(fileWay);
-            if (!string.IsNullOrEmpty(pasta) && DetectarModificacaoEmMassa(pasta))
-            {
-                Console.WriteLine("🚨 Modificações em massa detectadas.");
-                await AcionarProtecaoAsync(fileWay);
-            }
-        }
-
-        private double CalcularEntropia(string caminho)
-        {
-            try
-            {
-                if (!File.Exists(caminho)) return 0;
-                byte[] dados = File.ReadAllBytes(caminho);
-                if (dados.Length == 0) return 0;
-
-                int[] freq = new int[256];
-                foreach (byte b in dados) freq[b]++;
-
-                double entropia = 0;
-                foreach (int f in freq)
+                if (string.IsNullOrWhiteSpace(f)) continue;
+                try
                 {
-                    if (f == 0) continue;
-                    double p = (double)f / dados.Length;
-                    entropia -= p * Math.Log2(p);
+                    var nf = Path.GetFullPath(f).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
+                    list.Add(nf);
                 }
-                return entropia;
+                catch { /* ignora caminhos inválidos */ }
             }
-            catch
-            {
-                return 0;
-            }
+
+            if (list.Count == 0) throw new ArgumentException("Nenhuma pasta válida fornecida.");
+
+            this.targetFoldersNormalized = list.Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
+            this.windowSeconds = Math.Max(1, windowSeconds);
+            this.threshold = Math.Max(1, threshold);
+            this.protector = new Protection();
         }
 
-        private bool VerificarExtensaoSuspeita(string caminho)
+        public void Start()
         {
-            string[] extensoes = { ".wncry", ".wcry", ".locky", ".crypt", ".enc" };
-            string ext = Path.GetExtension(caminho)?.ToLower() ?? "";
-            return Array.Exists(extensoes, e => e == ext);
-        }
+            if (!(TraceEventSession.IsElevated() ?? false))
+                Console.WriteLine("[WARN] RealtimeDetection: execute como Administrador para garantir visibilidade ETW.");
 
-        private bool DetectarModificacaoEmMassa(string diretorio)
-        {
-            contadorEventos.AddOrUpdate(diretorio, 1, (_, v) => v + 1);
-            return contadorEventos[diretorio] > 10;
-        }
+            cts = new CancellationTokenSource();
 
-        private Task AcionarProtecaoAsync(string fileWay)
-        {
-            return Task.Run(() =>
+            string sessionName = "RansomDetectSession_" + Guid.NewGuid().ToString("N");
+            session = new TraceEventSession(sessionName, null);
+
+            session.EnableKernelProvider(
+                KernelTraceEventParser.Keywords.FileIOInit |
+                KernelTraceEventParser.Keywords.FileIO);
+
+            processingTask = Task.Run(() =>
             {
                 try
                 {
-                    string nomeArquivo = Path.GetFileNameWithoutExtension(fileWay);
+                    var source = session.Source;
 
-                    foreach (var proc in Process.GetProcesses())
-                    {
-                        try
-                        {
-                            string? caminhoProc = null;
-                            try { caminhoProc = proc.MainModule?.FileName; } catch { }
+                    source.Kernel.FileIOCreate += data => HandleFileEvent(data.ProcessID, data.FileName, "Create");
+                    source.Kernel.FileIOWrite += data => HandleFileEvent(data.ProcessID, data.FileName, "Write");
+                    source.Kernel.FileIODelete += data => HandleFileEvent(data.ProcessID, data.FileName, "Delete");
+                    source.Kernel.FileIORename += data => HandleFileEvent(data.ProcessID, data.FileName, "Rename");
 
-                            if (!string.IsNullOrEmpty(caminhoProc) &&
-                                caminhoProc.EndsWith(nomeArquivo + ".exe", StringComparison.OrdinalIgnoreCase))
-                            {
-                                protector.Protecao(proc.Id, caminhoProc, proc.ProcessName);
-                                return;
-                            }
-                        }
-                        catch { }
-                    }
-
-                    Console.WriteLine("[Detection] Nenhum processo suspeito encontrado para encerrar.");
+                    source.Process();
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"[Detection] Erro ao acionar proteção: {ex.Message}");
+                    Console.WriteLine($"[RealtimeDetection] ERRO na session.Process(): {ex}");
                 }
-            });
+            }, cts.Token);
+
+            Console.WriteLine($"[RealtimeDetection] Sessão ETW iniciada. Monitorando:");
+            foreach (var f in targetFoldersNormalized) Console.WriteLine($"  - {f}");
+            Console.WriteLine($"  window={windowSeconds}s threshold={threshold}");
+        }
+
+        private void HandleFileEvent(int pid, string fileName, string op)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(fileName)) return;
+
+                // Normaliza (usa separador do SO)
+                string normalized = fileName.Replace('/', Path.DirectorySeparatorChar);
+
+                // Testa se começa com qualquer pasta alvo
+                bool match = false;
+                foreach (var folder in targetFoldersNormalized)
+                {
+                    if (normalized.StartsWith(folder, StringComparison.OrdinalIgnoreCase))
+                    {
+                        match = true;
+                        break;
+                    }
+                }
+                if (!match) return;
+
+                // Se já tratado, ignora
+                if (pidHandled.TryGetValue(pid, out bool handled) && handled) return;
+
+                var q = pidEvents.GetOrAdd(pid, _ => new ConcurrentQueue<DateTime>());
+                q.Enqueue(DateTime.UtcNow);
+
+                TrimQueue(q);
+
+                if (q.Count >= threshold)
+                {
+                    pidHandled[pid] = true;
+
+                    Task.Run(() =>
+                    {
+                        string pname = "?";
+                        string ppath = normalized;
+                        try
+                        {
+                            var proc = Process.GetProcessById(pid);
+                            pname = proc.ProcessName;
+                            try { ppath = proc.MainModule?.FileName ?? normalized; } catch { }
+                        }
+                        catch { /* processo pode ter terminado */ }
+
+                        Console.WriteLine($"[RealtimeDetection] ALERT: PID {pid} ({pname}) excedeu threshold ({q.Count} ops em {windowSeconds}s) em pasta monitorada.");
+                        try
+                        {
+                            protector.Protecao(pid, ppath, pname);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"[RealtimeDetection] Erro ao chamar Protecao: {ex.Message}");
+                        }
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[RealtimeDetection] Handler error: {ex.Message}");
+            }
+        }
+
+        private void TrimQueue(ConcurrentQueue<DateTime> q)
+        {
+            var cutoff = DateTime.UtcNow.AddSeconds(-windowSeconds);
+            while (q.TryPeek(out DateTime dt) && dt < cutoff)
+            {
+                q.TryDequeue(out _);
+            }
+        }
+
+        public void Stop()
+        {
+            try
+            {
+                cts?.Cancel();
+                session?.Dispose();
+                processingTask?.Wait(1000);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[RealtimeDetection] Erro ao parar: {ex.Message}");
+            }
+            finally
+            {
+                pidEvents.Clear();
+                pidHandled.Clear();
+                Console.WriteLine("[RealtimeDetection] Parado.");
+            }
+        }
+
+        public void Dispose()
+        {
+            Stop();
+            cts?.Dispose();
         }
     }
 }

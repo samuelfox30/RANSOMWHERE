@@ -113,3 +113,23 @@ D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.pdb
 D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.genruntimeconfig.cache
 D:\rabeloransomware\RANSOMWHERE_OFC\obj\Debug\net9.0\ref\Monitoramento.dll
 >>>>>>> 73ac83e8c0ff45047ea887e1f96e30a7a5531dc9
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitoramento.csproj.AssemblyReference.cache
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\TraceReloggerLib.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Dia2Lib.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\x86\KernelTraceControl.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\x86\KernelTraceControl.Win61.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\x86\msdia140.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\amd64\KernelTraceControl.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\amd64\msdia140.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\arm64\KernelTraceControl.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\arm64\msdia140.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Diagnostics.NETCore.Client.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Diagnostics.FastSerialization.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\RANSOMWHERE_OFC\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\RANSOMWHERE_OFC\obj\Debug\net9.0\Monitora.33860727.Up2Date

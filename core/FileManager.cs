@@ -6,12 +6,7 @@ namespace Monitoramento
 {
     public class FileManager
     {
-        // Pastas que serão monitoradas
-        /* private readonly string[] PastasParaMonitorar = new[]
-        {
-            $@"C:\Users\{Environment.UserName}\Documents",
-            $@"C:\Users\{Environment.UserName}\OneDrive\Área de Trabalho",
-        }; */
+        // Pastas monitoradas
         private readonly string[] PastasParaMonitorar = new[]
         {
             $@"C:\Users\{Environment.UserName}\Documents",
@@ -20,16 +15,15 @@ namespace Monitoramento
             $@"C:\Users\{Environment.UserName}\Downloads",
         };
 
-        // Lista para segurar watchers (evita que sejam coletados pelo GC)
+        // Lista para segurar watchers (evita GC)
         private readonly List<FileSystemWatcher> _watchers = new();
 
-        // Dependências externas (classes auxiliares)
+        // Classe de log
         private readonly Notification log = new();
-        private readonly Detection detect = new();
 
         public void Iniciar()
         {
-            Console.WriteLine("[INFO] Iniciando monitoramento…");
+            Console.WriteLine("[INFO] Iniciando monitoramento de pastas (logger)…");
 
             foreach (var pasta in PastasParaMonitorar)
             {
@@ -49,26 +43,20 @@ namespace Monitoramento
                                  | NotifyFilters.Size
                 };
 
-                // Eventos monitorados
-                watcher.Created += (s, e) => log.SaveChanges($"Criado:    {e.FullPath}");
-                watcher.Deleted += (s, e) => log.SaveChanges($"Deletado:  {e.FullPath}");
-                watcher.Changed += (s, e) => RegistrarEAnalisar($"Alterado:  {e.FullPath}", e.FullPath);
-                watcher.Renamed += (s, e) => log.SaveChanges($"Renomeado: {e.OldFullPath} -> {e.FullPath}");
+                // Apenas registra logs, sem chamar detecção
+                watcher.Created += (s, e) => log.SaveChanges($"[LOG] Criado:    {e.FullPath}");
+                watcher.Deleted += (s, e) => log.SaveChanges($"[LOG] Deletado:  {e.FullPath}");
+                watcher.Changed += (s, e) => log.SaveChanges($"[LOG] Alterado:  {e.FullPath}");
+                watcher.Renamed += (s, e) => log.SaveChanges($"[LOG] Renomeado: {e.OldFullPath} -> {e.FullPath}");
 
                 _watchers.Add(watcher);
 
                 Console.WriteLine($"   ↳ Monitorando: {pasta}");
-                log.SaveChanges($"INFO: Iniciado monitoramento em {pasta}");
+                log.SaveChanges($"[INFO] Iniciado monitoramento em {pasta}");
             }
 
             Console.WriteLine("[INFO] Pressione Enter para sair…");
             Console.ReadLine();
-        }
-
-        private void RegistrarEAnalisar(string mensagem, string caminho)
-        {
-            log.SaveChanges(mensagem);
-            detect.Detector(caminho);
         }
     }
 }
